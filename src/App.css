@@ -1,42 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#check {
+    display: none;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#close{
+    display: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.save{
+    margin: 80px 0 0 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+label #btn {
+    position: absolute;
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+    border-radius: 3px;
+    font-size: 15pt;
+    padding: 6px 12px;
+    transition: all 0.5s;
 }
 
-.card {
-  padding: 2em;
+span{
+    margin: 100px 80px;
 }
 
-.read-the-docs {
-  color: #888;
+.sidebar {
+    display: none;
+    z-index: 1111;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transition: opacity 0.5s ease, width 0.5s ease;
+}
+
+#close:checked ~ .sidebar{
+    opacity: 0;
+    width: 0;
+    display: none;
+}
+
+#check:checked ~ .sidebar {
+    opacity: 1;
+    width: 450px;
+    display: block;
+}
+
+.sidebar-nav{
+    width: auto;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 8px;
+}
+
+.select-menu select option{
+    font-size: 12pt;
 }
