@@ -2,11 +2,10 @@
 
 ## To run locally
 
-### Clone the project and run following commands
+### Clone the project locally and run the following commands
 ```
 1. npm install
 2. npm run dev
-
 ```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
